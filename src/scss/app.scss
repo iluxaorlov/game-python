@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    height: 100vh;
+}
+
+#field {
+    border-collapse: collapse;
+    box-shadow: 0 0 10vw 0 rgba($color: #ffffff, $alpha: .25);
+    
+    td {
+        width: 16px;
+        height: 16px;
+    }
+
+    .snake {
+        background-color: #0080ff;
+        box-shadow: 0 0 16px 0 #0080ff;
+    }
+
+    .apple {
+        background-color: #ff8000;
+        animation: blink 2s infinite alternate linear;
+    }
+
+    @keyframes blink {
+        from {
+            box-shadow: 0 0 0 0 #ff8000;
+        }
+        to {
+            box-shadow: 0 0 16px 0 #ff8000;
+        }
+    }
+}
