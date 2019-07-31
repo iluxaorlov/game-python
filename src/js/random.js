@@ -10,8 +10,8 @@ function random() {
         // random block
         const block = field.rows[row].cells[cell];
 
-        if (block.className !== 'snake') {
-            // if random block is not the snake
+        if (block.className !== 'python') {
+            // if random block is not python
             block.className = 'apple';
             return;
         }

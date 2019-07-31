@@ -1,39 +1,43 @@
 import game from './app';
-import move from './move';
+import crawl from './crawl';
 
 function direction(code) {
     switch (code) {
         case 37:
-            if (game.direction === 'right' || game.crawl === true) return;
+            if (game.direction === 'right' || game.process === true) return;
+            // change direction
             game.direction = 'left';
-            // start crawling
-            game.crawl = true;
+            // start process of crawling
+            game.process = true;
             break;
         case 38:
-            if (game.direction === 'down' || game.crawl === true) return;
+            if (game.direction === 'down' || game.process === true) return;
+            // change direction
             game.direction = 'up';
-            // start crawling
-            game.crawl = true;
+            // start process of crawling
+            game.process = true;
             break;
         case 39:
-            if (game.direction === 'left' || game.crawl === true) return;
+            if (game.direction === 'left' || game.process === true) return;
+            // change direction
             game.direction = 'right';
-            // start crawling
-            game.crawl = true;
+            // start process of crawling
+            game.process = true;
             break;
         case 40:
-            if (game.direction === 'up' || game.crawl === true) return;
+            if (game.direction === 'up' || game.process === true) return;
+            // change direction
             game.direction = 'down';
-            // start crawling
-            game.crawl = true;
+            // start process of crawling
+            game.process = true;
             break;
     }
 
     setInterval(function() {
-        // checking of interval
+        // checking interval
         if (game.interval === false) {
             // starting new interval
-            game.interval = setInterval(move, game.speed);
+            game.interval = setInterval(crawl, game.speed);
         }
     });
 }

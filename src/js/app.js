@@ -3,14 +3,14 @@ import random from './random';
 import direction from './direction';
 
 let game = {
-    speed: 750,
+    speed: 500,
     score: 0,
-    snake: [],
-    direction: '',
-    crawl: false,
+    python: [],
+    direction: false,
     interval: false,
-    row: document.getElementsByClassName('snake')[0].parentElement.rowIndex,
-    cell: document.getElementsByClassName('snake')[0].cellIndex
+    process: false,
+    row: document.getElementsByClassName('python')[0].parentElement.rowIndex,
+    cell: document.getElementsByClassName('python')[0].cellIndex
 };
 
 document.addEventListener('keydown', function(event) {
