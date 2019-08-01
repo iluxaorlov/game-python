@@ -39,8 +39,23 @@ function crawl() {
 }
 
 function lose() {
+    document.body.style.backgroundColor = '#0d0d0d';
+    document.getElementById('field').style.borderColor = '#808080';
+    document.getElementById('score').style.color = '#808080';
+    document.getElementById('retry').style.display = 'block';
+
+    for (let item of document.getElementsByClassName('python')) {
+        item.style.backgroundColor = '#808080';
+        item.style.boxShadow = '0 0 16px 0 #808080';
+    }
+
+    for (let item of document.getElementsByClassName('apple')) {
+        item.style.backgroundColor = '#808080';
+        item.style.animation = 'none';
+        item.style.boxShadow = '0 0 16px 0 #808080';
+    }
+
     clearInterval(game.interval);
-    alert('You lose');
 }
 
 export default crawl;

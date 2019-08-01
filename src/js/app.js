@@ -13,7 +13,7 @@ let game = {
     cell: document.getElementsByClassName('python')[0].cellIndex
 };
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', (event) => {
     const code = event.which;
 
     switch (code) {
@@ -27,6 +27,10 @@ document.addEventListener('keydown', function(event) {
         case 40:
             direction(code);
     }
+});
+
+document.getElementById('retry').addEventListener('click', () => {
+    window.location.reload();
 });
 
 // create random apple

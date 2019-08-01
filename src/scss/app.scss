@@ -12,15 +12,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #002040;
+    background-color: #000d1a;
     height: 100vh;
 }
 
 #score {
+    position: fixed;
+    top: 0;
     color: $apple;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 10px;
+    display: block;
 }
 
 #field {
@@ -51,4 +54,11 @@ body {
             box-shadow: 0 0 10px 0 $apple;
         }
     }
+}
+
+#retry {
+    position: absolute;
+    display: none;
+    width: 60px;
+    height: 60px;
 }
