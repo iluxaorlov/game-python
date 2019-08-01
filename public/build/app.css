@@ -12,13 +12,11 @@ body {
   height: 100vh; }
 
 #score {
-  position: fixed;
-  top: 0;
   color: #ffff00;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 10px;
-  display: block; }
+  margin-top: -50px;
+  margin-bottom: 20px; }
 
 #field {
   display: block;

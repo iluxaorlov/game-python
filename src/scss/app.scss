@@ -17,13 +17,11 @@ body {
 }
 
 #score {
-    position: fixed;
-    top: 0;
     color: $apple;
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 10px;
-    display: block;
+    margin-top: -50px;
+    margin-bottom: 20px;
 }
 
 #field {
