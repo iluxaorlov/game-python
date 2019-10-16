@@ -3,13 +3,21 @@ import random from './random';
 import direction from './direction';
 
 let game = {
+    // game speed
     speed: 500,
+    // current score
     score: 0,
+    // contains all python blocks
     python: [],
+    // direction of crawling
     direction: false,
+    // stores crawling interval
     interval: false,
+    // process of crawling
     process: false,
+    // row of python position
     row: document.getElementsByClassName('python')[0].parentElement.rowIndex,
+    // cell of python position
     cell: document.getElementsByClassName('python')[0].cellIndex
 };
 
